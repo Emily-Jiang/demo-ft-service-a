@@ -257,7 +257,7 @@
     <profile>
     <id>thorntail</id>
       <properties>
-        <version.thorntail>2.1.0.Final</version.thorntail>
+        <version.thorntail>2.2.0.Final</version.thorntail>
       </properties>
 
       <dependencyManagement>
@@ -320,6 +320,7 @@
             <version>${version.thorntail}</version>
             <configuration>
               <properties>
+                <swarm.http.port>9080</swarm.http.port>
                 <!--<swarm.bind.address>127.0.0.1</swarm.bind.address>-->
                 <java.net.preferIPv4Stack>true</java.net.preferIPv4Stack>
               </properties>
