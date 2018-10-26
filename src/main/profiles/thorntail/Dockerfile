@@ -1,6 +1,6 @@
 FROM openjdk:jre
 
-EXPOSE 8080
+EXPOSE 9080
 
 ADD target/service-a-thorntail.jar /opt/service-a.jar
 

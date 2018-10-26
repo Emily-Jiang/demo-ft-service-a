@@ -25,7 +25,7 @@ The pom is designed to contain application server profiles with which you can te
 
     mvn -P liberty install liberty:run-server
 
-The service will be accessible at http://localhost:8080/ft/serviceA
+The service will be accessible at http://localhost:9080/ft/serviceA
 
 ### Run the service locally in a Docker container
 
@@ -38,19 +38,19 @@ The service will be accessible at http://localhost:8080/ft/serviceA
 
 ### Run the service locally
 
-    mvn package -Pthorntail
+    mvn clean package -Pthorntail
     java -jar target/service-a-thorntail.jar
     
 or    
     
-    mvn -Pthorntail thorntail:run -Dwildfly-swarm.useUberJar=true
+    mvn -Pthorntail clean thorntail:run -Dwildfly-swarm.useUberJar=true
 
-The service will be accessible at http://localhost:8080/ft/serviceA
+The service will be accessible at http://localhost:9080/ft/serviceA
 
 ### Run the service in a Docker container
 
-    mvn package -Pthorntail
+    mvn clean package -Pthorntail
     docker build -t servicea -f src/main/profiles/thorntail/Dockerfile .
-    docker run -p 8080:8080 servicea
+    docker run -p 9080:9080 servicea
 
 The service will be accessible at http://localhost:8080/ft/serviceA
